@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Udacity Final!</title>
+		<style type="text/css">
+			body {
+				font-family: Helvetica, Arial, sans-serif;
+				font-size: 14px;
+
+				width: 800px;
+				margin: 0 auto;
+				padding: 10px;
+				color: #333;
+			}
+
+			.edit-login-signup{
+				position: absolute;
+				color: #808080;
+				top: 10px;
+				right: 10px;
+			}
+
+			h1 {
+				background-color: #ddd;
+				color: #888;
+				margin: 0 height: 50px;
+				text-align: center
+			}
+			a {
+				color: #808080;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<a href="/">
+				Tim's Udacity Projects - Final
+			</a>
+		</h1>
+		<div class="edit-login-signup">
+			<a href="{{edit_url}}">edit</a> | 
+			{% if logged_in %}
+				{{username}} (<a href="/logout">logout</a>)
+			{% else %}
+				<a href="/login">login</a> | <a href="/signup">signup</a>
+			{% endif %}
+		</div>
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>

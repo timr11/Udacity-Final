@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/unit_4/static/main.css">
+		<title>Udacity Unit 4!</title>
+	</head>
+	<body>
+		<h1 style="background-color: #ddd; color: #888; margin: 0 height: 50px; text-align: center">
+			Tim's Udacity Projects - Unit 4
+		</h1>
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>

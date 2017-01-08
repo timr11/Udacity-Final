@@ -1,0 +1,18 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /static
+  static_dir: unit_4/static
+
+- url: /.*
+  script: main.app
+
+#[START libraries]
+libraries:
+- name: jinja2
+  version: latest
+- name: PIL
+  version: "1.1.7"
+#[FINISH libraries]
